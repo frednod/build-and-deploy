@@ -24,10 +24,11 @@ const PosterCard = ({ classes, posterUrl, movieDetails }) => (
           {movieDetails.title}
         </Typography>
         <Typography component="p">{movieDetails.overview}</Typography>
+        <Typography component="br" />
+        <Typography component="p">{`Rating: ${movieDetails.vote_average} (${movieDetails.vote_count} votes)`}</Typography>
       </CardContent>
       <CardActions>
-        {/* TODO */}
-        <Button href={'https://www.themoviedb.org/movie/' + movieDetails.id}>
+        <Button href={`https://www.themoviedb.org/movie/${movieDetails.id}`}>
           Read more
         </Button>
       </CardActions>
