@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
 script:
-  - npm run lint
-  - npm test
-  - npm run build
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  api_key:
+    secure: pL4FKbPfy1ibP+4Fcnj8NF8iZ/Z+dc1NJ758XGrTss6yAfHwo5LI/QC5m3WoUm7HnfRPmEtGOg3OXFV641MQaMi+09MerjKtGYWHZa7+DjNQwNMckBMhFF83IDH0rDCzrdfjjKvsKq+5FmPUOZeX7Cz8Ov7BiyTeAmaSPka1t0anhhqP77Fq4I3kLOsvIx1DRqvg2e8aGqGarBQMwQMG7gsiDoK3DG2aCNdmX64vuRC4gR15qGNDIqMEKdvDbvM+huPbTnQ1LRD8F38K2vQn2uUWAn3IaYndZDah+1uWrHKE30rAr9TmUHINubtg/czkHLOBdKywgjuPINg/HYafYguPUbpDImPHaVozmJSIo/VZLKCGfgNVvfvQrTCoMLx4ETCVH5Vt8ilEn6se4SSzkxsVf6nJsbZDJaUfLoCHNRoBrYwQ1L8Cq1xD3uSfDcTGi+LMV0GHoRePwkctVVBbWG6NLED90x3O031Zd+bBtV8Q4tiTvV+0VfjSsd1uL3wW4Ym8hBWNBfjPY5cTr3RHrfkTA72YTWLaIWFE1WaVWPXfzJB70IerQvjkD1GFNedEyvOXFw2Px+2TMov9+WRp2AlHI8ByHKlzdxlWVCVAb5Lk0tD9C3atlqhwWuwuQoedsw87TZg2mW2bWDxq+xljNCEFDKVBBahiObbIhX8wAxQ=
+  provider: heroku
+  app: frednod-build-and-deploy
+  skip_cleanup: true
